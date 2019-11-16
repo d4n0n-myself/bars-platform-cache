@@ -1,0 +1,82 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="Controllers\WeatherForecastController.fs" />
+        <Compile Include="Controllers\SystemController.fs" />
+        <Compile Include="Controllers\UsersController.fs" />
+        <Compile Include="StartupExtensions.fs" />
+        <Compile Include="Startup.fs" />
+        <Compile Include="Program.fs" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.0.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.0.0" />
+        <PackageReference Include="Microsoft.AspNetCore.SpaServices" Version="3.0.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="5.0.0-rc4" />
+        <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="5.0.0-rc4" />
+        <PackageReference Include="VueCliMiddleware" Version="3.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="ClientApp\.editorconfig" />
+      <None Include="ClientApp\.gitignore" />
+      <None Include="ClientApp\.postcssrc.js" />
+      <None Include="ClientApp\.prettierrc.json" />
+      <None Include="ClientApp\.quasar\app.js" />
+      <None Include="ClientApp\.quasar\client-entry.js" />
+      <None Include="ClientApp\.quasar\import-quasar.js" />
+      <None Include="ClientApp\babel.config.js" />
+      <None Include="ClientApp\package-lock.json" />
+      <None Include="ClientApp\package.json" />
+      <None Include="ClientApp\quasar.conf.js" />
+      <None Include="ClientApp\README.md" />
+      <None Include="ClientApp\src\App.vue" />
+      <None Include="ClientApp\src\boot\.gitkeep" />
+      <None Include="ClientApp\src\boot\vuelidate.js" />
+      <None Include="ClientApp\src\components\.gitkeep" />
+      <None Include="ClientApp\src\css\app.styl" />
+      <None Include="ClientApp\src\css\quasar.variables.styl" />
+      <None Include="ClientApp\src\index.template.html" />
+      <None Include="ClientApp\src\layouts\MyLayout.vue" />
+      <None Include="ClientApp\src\models\IWeatherForecast.ts" />
+      <None Include="ClientApp\src\models\modules\jwt-decode.d.ts" />
+      <None Include="ClientApp\src\models\user.d.ts" />
+      <None Include="ClientApp\src\pages\authentication\Login.vue" />
+      <None Include="ClientApp\src\pages\authentication\Register.vue" />
+      <None Include="ClientApp\src\pages\Error404.vue" />
+      <None Include="ClientApp\src\pages\Index.vue" />
+      <None Include="ClientApp\src\router\auth.ts" />
+      <None Include="ClientApp\src\router\index.ts" />
+      <None Include="ClientApp\src\router\routes.ts" />
+      <None Include="ClientApp\src\store\api\api.ts" />
+      <None Include="ClientApp\src\store\api\WeatherForecast.ts" />
+      <None Include="ClientApp\src\store\helpers\jwtHelpers.ts" />
+      <None Include="ClientApp\src\store\index.ts" />
+      <None Include="ClientApp\src\store\modules\Login.ts" />
+      <None Include="ClientApp\src\store\modules\WeatherForecast.ts" />
+      <None Include="ClientApp\tsconfig.json" />
+      <None Include="ClientApp\tslint.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Platform.Domain\Platform.Domain.csproj" />
+      <ProjectReference Include="..\Platform.Migrations\Platform.Migrations.csproj" />
+      <ProjectReference Include="..\Platform.Services\Platform.Services.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Views\Home\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Home\Privacy.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Shared\Error.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Shared\_Layout.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Shared\_ValidationScriptsPartial.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\_ViewImports.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\_ViewStart.cshtml" />
+    </ItemGroup>
+
+</Project>
